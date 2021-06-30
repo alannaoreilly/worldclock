@@ -37,9 +37,9 @@
     (document.getElementById("est"));
     
 
-    let est = 6
+    let est = 12
     let ust = est + 4
-    let min = '00' 
+    let min = '18' 
 
 
     //LA
@@ -174,7 +174,7 @@
             return cst + ':' + min + 'am';
         }
         else{
-            cst = cst - 12
+            cst = Math.abs(cst - 12)
                 if (cst == 0){
                     return 12 + ':' + min + 'pm';
                 }
@@ -191,7 +191,7 @@
             return sst + ':' + min + 'am';
         }
         else{
-            sst = sst - 12
+            sst = Math.abs(sst - 24)
                 if (sst == 0){
                     return 12 + ':' + min + 'pm';
                 }
@@ -204,17 +204,16 @@
 
     //Auckland
     const logTimeAST = () => {
-        ast = ust + 12
-        if (ast < 12 && ast > 0){
-            return ast + ':' + min + 'am';
+        if (ust < 12 && ust > 0){
+            return ust + ':' + min + 'pm';
         }
         else{
-            ast = ast - 12
-                if (ast == 0){
-                    return 12 + ':' + min + 'pm';
+            ust = ust - 12
+                if (ust == 0){
+                    return 12 + ':' + min + 'am';
                 }
                 else{
-                    return ast + ':' + min + 'pm';
+                    return ust + ':' + min + 'am';
                 }
             }     
     };
