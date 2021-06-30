@@ -1,0 +1,34 @@
+body {
+    background-image: url(FLETCHERHEALINGFINAL-1-bg-compressed.jpeg);
+    background-size: cover;
+    text-align: center;
+}
+
+
+.log-boolean, .log-undefined {
+    color: magenta;
+}
+
+.log-string {
+    color:white;
+    font-size:4vw;
+    font-family: 'Poppins-Medium';
+    
+}
+
+.log-object{
+    color:white;
+    font-size:5vw;
+    font-family: 'Poppins-Medium';
+}
+
+.log-number {
+    color: cyan;
+}
+
+h1{
+    color:white;
+    font-size:6vw;
+    font-family: 'Poppins-Medium';
+
+}
