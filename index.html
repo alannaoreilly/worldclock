@@ -205,15 +205,15 @@
     const logTimeSST = () => {
         sst = ust + 10
         if (sst < 12 && sst > 0){
-            return sst + ':' + min + 'am';
+            return sst + ':' + min + 'pm';
         }
         else{
             sst = Math.abs(sst - 24)
                 if (sst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'am';
                 }
                 else{
-                    return sst + ':' + min + 'pm';
+                    return sst + ':' + min + 'am';
                 }
             }     
     };
