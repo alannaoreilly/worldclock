@@ -7,7 +7,27 @@
 </head>
 <body>
     <h1> Timezones </h1>
-    <div id='est'></div>
+    <div id='containter'>
+        <div id='countries'>
+            <ul>
+                <li>LOS ANGELES</li>
+                <li>MEXICO CITY</li>
+                <li>NEW YORK CITY</li>
+                <li>RIO DE JANEIRO</li>
+                <li>LONDON</li>
+                <li>BERLIN</li>
+                <li>INSTANBUL</li>
+                <li>BEIJING</li>
+                <li>SYDNEY</li>
+                <li>AUCKLAND</li>
+            </ul>
+        </div>
+        <div id='time'>
+             <div id='est'>
+             </div>
+        </div>
+    </div>
+
 </body>
 
 <script>
@@ -214,16 +234,16 @@
             }     
     };
  
-    console.log("LOS ANGELES " + ' &nbsp &nbsp' + logTimePST());
-    console.log("MEXICO CITY "+ ' &nbsp &nbsp'  + logTimeMST());
-    console.log("NEW YORK CITY   "+ ' &nbsp &nbsp'  + logTimeEST());
-    console.log("RIO DE JANEIRO   "+ ' &nbsp &nbsp'  + logTimeBrST());
-    console.log("LONDON   "+ ' &nbsp &nbsp'  + logTimeBST());
-    console.log("BERLIN   " + ' &nbsp &nbsp' + logTimeGST());
-    console.log("ISTANBUL   "+ ' &nbsp &nbsp'  + logTimeIST());
-    console.log("BEIJING   "+ ' &nbsp &nbsp'   + logTimeCST());
-    console.log("SYDNEY   " + ' &nbsp &nbsp'  + logTimeSST());
-    console.log("AUCKLAND   " + ' &nbsp &nbsp'  + logTimeAST());
+    console.log(' &nbsp &nbsp' + logTimePST());
+    console.log(' &nbsp &nbsp'  + logTimeMST());
+    console.log(' &nbsp &nbsp'  + logTimeEST());
+    console.log(' &nbsp &nbsp'  + logTimeBrST());
+    console.log(' &nbsp &nbsp'  + logTimeBST());
+    console.log(' &nbsp &nbsp' + logTimeGST());
+    console.log(' &nbsp &nbsp'  + logTimeIST());
+    console.log(' &nbsp &nbsp'   + logTimeCST());
+    console.log(' &nbsp &nbsp'  + logTimeSST());
+    console.log( ' &nbsp &nbsp'  + logTimeAST());
 
 </script>
 
