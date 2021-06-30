@@ -4,6 +4,10 @@ body {
     text-align: center;
 }
 
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url(Poppins-Medium.ttf) format('truetype');
+}
 
 .log-boolean, .log-undefined {
     color: magenta;
@@ -36,8 +40,3 @@ h1{
 
 }
 
-/* devanagari */
-@font-face {
-    font-family: 'Poppins-Medium';
-    src: url(Poppins-Medium.ttf) format('ttf');
-}
