@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale = 1.0, user-scalable = no">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
@@ -8,8 +9,6 @@
     <h1> Timezones </h1>
     <div id='est'></div>
 </body>
-
-
 
 <script>
     (function (est) {
@@ -36,11 +35,9 @@
     })
     (document.getElementById("est"));
     
-
     let est = 12
     let ust = est + 4
-    let min = '18' 
-
+    let min = '30' 
 
     //LA
     const logTimePST = () => {
@@ -201,7 +198,6 @@
             }     
     };
 
-
     //Auckland
     const logTimeAST = () => {
         if (ust < 12 && ust > 0){
@@ -217,10 +213,7 @@
                 }
             }     
     };
-
-
-
-    
+ 
     console.log("LOS ANGELES " + ' &nbsp &nbsp' + logTimePST());
     console.log("MEXICO CITY "+ ' &nbsp &nbsp'  + logTimeMST());
     console.log("NEW YORK CITY   "+ ' &nbsp &nbsp'  + logTimeEST());
@@ -231,11 +224,6 @@
     console.log("BEIJING   "+ ' &nbsp &nbsp'   + logTimeCST());
     console.log("SYDNEY   " + ' &nbsp &nbsp'  + logTimeSST());
     console.log("AUCKLAND   " + ' &nbsp &nbsp'  + logTimeAST());
-    
-
-
-
-
 
 </script>
 
