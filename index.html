@@ -55,9 +55,9 @@
     })
     (document.getElementById("est"));
     
-    let est = 12
+    let est = 13
     let ust = est + 4
-    let min = '30' 
+    let min = '25' 
 
     //LA
     const logTimePST = () => {
@@ -190,7 +190,7 @@
         if (cst < 12){
             return cst + ':' + min + 'am';
         }
-        else{
+        else if (cst < 24) {
             cst = Math.abs(cst - 12)
                 if (cst == 0){
                     return 12 + ':' + min + 'pm';
@@ -198,7 +198,13 @@
                 else{
                     return cst + ':' + min + 'pm';
                 }
-            }     
+            }   
+        else{
+            cst = cst -24
+            return cst + ':' + min + 'am';
+        }
+            
+        
     };
 
     //Sydney
