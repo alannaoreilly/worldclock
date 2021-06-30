@@ -58,15 +58,14 @@ li{
 #time{
     float:left;
     width:50%;
+    text-align:right;
 }
 
 #countries{
     float:left;
     width: 50%;
 }
-* {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-  }
-  
+
+#est{
+    float:right;
+}
