@@ -12,14 +12,14 @@ body {
 .log-string {
     color:white;
     font-size:6vw;
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     
 }
 
 .log-object{
     color:white;
     font-size:6vw;
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
 }
 
 .log-number {
@@ -29,7 +29,7 @@ body {
 h1{
     color:white;
     font-size:6vw;
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
 
     margin: 0px;
     padding-bottom: 0.5vw;
