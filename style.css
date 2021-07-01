@@ -1,6 +1,8 @@
 body {
     background-image: url(FLETCHERHEALINGFINAL-1-bg-compressed.jpeg);
     background-size: cover;
+    margin:0;
+    margin-top:1vh;
     
 }
 
@@ -15,7 +17,7 @@ body {
 
 .log-string {
     color:white;
-    font-size:7vw;
+    font-size:6vw;
     font-family: 'Poppins-Medium';
     
 }
@@ -47,7 +49,7 @@ ul{
 
 li{
     color:white;
-    font-size:7vw;
+    font-size:6vw;
     font-family: 'Poppins-Medium';
   
 }
@@ -57,16 +59,18 @@ li{
 }
 
 #time{
-    float:left;
-    width:40%;
+    float:right;
+ 
     text-align:right;
 }
 
 #countries{
     float:left;
-    width: 60%;
+    
 }
 
 #est{
     float:right;
 }
+
+  
