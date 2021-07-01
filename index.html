@@ -17,6 +17,7 @@
                 <li>LONDON</li>
                 <li>BERLIN</li>
                 <li>INSTANBUL</li>
+                <li>ISLAMABAD</li>
                 <li>BEIJING</li>
                 <li>SYDNEY</li>
                 <li>AUCKLAND</li>
@@ -55,9 +56,13 @@
     })
     (document.getElementById("est"));
     
-    let est = 13
+    //Times that work: 8pm EST, 1pm ET
+    
+    var time = Number(window.prompt("time"));
+
+    let est = time
     let ust = est + 4
-    let min = '25' 
+    let min = '15' 
 
     //LA
     const logTimePST = () => {
@@ -116,73 +121,130 @@
     //Brazil 
     const logTimeBrST = () => {
         brst = ust - 3
-        if (brst < 12 && brst > 0){
+        if (brst < 12){
             return brst + ':' + min + 'am';
         }
-        else{
-            brst = brst - 12
+        else if (brst < 24) {
+            brst = Math.abs(brst - 12)
                 if (brst == 0){
                     return 12 + ':' + min + 'pm';
                 }
                 else{
                     return brst + ':' + min + 'pm';
                 }
-            }     
+            }   
+        else{
+            brst = brst -24
+                if (brst == 0){
+                    return 12 + ':' + min + 'am';
+                }
+                else{
+                    return brst + ':' + min + 'am';
+                }
+         }    
     };
 
 
     //London
     const logTimeBST = () => {
         bst = ust +1 
-        if (bst < 12 && bst > 0){
+        if (bst < 12){
             return bst + ':' + min + 'am';
         }
-        else{
-            bst = bst - 12
+        else if (bst < 24) {
+            bst = Math.abs(bst - 12)
                 if (bst == 0){
                     return 12 + ':' + min + 'pm';
                 }
                 else{
                     return bst + ':' + min + 'pm';
                 }
-            }     
+            }   
+        else{
+            bst = bst -24
+            return bst + ':' + min + 'am';
+        }
     };
 
    
     // Germany 
     const logTimeGST = () => {
         Gst = ust + 2
-        if (Gst < 12 && Gst > 0){
+        if (Gst < 12){
             return Gst + ':' + min + 'am';
         }
-        else{
-            Gst = Gst - 12
+        else if (Gst < 24) {
+            Gst = Math.abs(Gst - 12)
                 if (Gst == 0){
                     return 12 + ':' + min + 'pm';
                 }
                 else{
                     return Gst + ':' + min + 'pm';
                 }
-            }     
+            }   
+        else{
+            Gst = Gst -24
+            if (Gst == 0){
+                    return 12 + ':' + min + 'am';
+                }
+                else{
+                    return Gst + ':' + min + 'am';
+                }
+         }   
     };
 
     //Istanbul
     const logTimeIST = () => {
         ist = ust + 3
-        if (ist < 12 && ist > 0){
+        if (ist < 12){
             return ist + ':' + min + 'am';
         }
-        else{
-            ist = ist - 12
+        else if (ist < 24) {
+            ist = Math.abs(ist - 12)
                 if (ist == 0){
                     return 12 + ':' + min + 'pm';
                 }
                 else{
                     return ist + ':' + min + 'pm';
                 }
-            }     
+            }   
+        else{
+            ist = ist -24
+            if (ist == 0){
+                    return 12 + ':' + min + 'am';
+                }
+                else{
+                    return ist + ':' + min + 'am';
+                }
+            }
     };
 
+    //Islamabad
+    const logTimeIsST = () => {
+        isst = ust + 5
+        if (isst < 12){
+            return isst + ':' + min + 'am';
+        }
+        else if (isst < 24) {
+            isst = Math.abs(isst - 12)
+                if (isst == 0){
+                    return 12 + ':' + min + 'pm';
+                }
+                else{
+                    return isst + ':' + min + 'pm';
+                }
+            }   
+        else{
+            isst = isst -24
+            if (isst == 0){
+                    return 12 + ':' + min + 'am';
+                }
+                else{
+                    return isst + ':' + min + 'am';
+                }
+         }   
+        
+    };
 
     //Beijing
     const logTimeCST = () => {
@@ -201,43 +263,67 @@
             }   
         else{
             cst = cst -24
-            return cst + ':' + min + 'am';
-        }
-            
-        
+            if (cst == 0){
+                    return 12 + ':' + min + 'am';
+                }
+                else{
+                    return cst + ':' + min + 'am';
+                }
+            }
     };
 
     //Sydney
     const logTimeSST = () => {
-        sst = ust + 10
-        if (sst < 12 && sst > 0){
+        sst = ust - 2
+        if (sst < 12){
             return sst + ':' + min + 'pm';
         }
-        else{
-            sst = Math.abs(sst - 24)
+        else if (sst < 24) {
+            sst = Math.abs(sst - 12)
                 if (sst == 0){
                     return 12 + ':' + min + 'am';
                 }
                 else{
                     return sst + ':' + min + 'am';
                 }
-            }     
+            }   
+        else{
+            sst = sst -24
+            if (sst == 0){
+                    return 12 + ':' + min + 'pm';
+                }
+                else{
+                    return sst + ':' + min + 'pm';
+                }
+         }   
+
     };
 
     //Auckland
     const logTimeAST = () => {
-        if (ust < 12 && ust > 0){
-            return ust + ':' + min + 'pm';
+        if (ust < 12){
+            return ust + ':' + min + 'am';
         }
-        else{
-            ust = ust - 12
+        else if (ust < 24) {
+            ust = Math.abs(ust - 12)
                 if (ust == 0){
                     return 12 + ':' + min + 'am';
                 }
                 else{
                     return ust + ':' + min + 'am';
                 }
-            }     
+            }   
+        else{
+            ust = ust -24
+            if (ust == 0){
+                    return 12 + ':' + min + 'pm';
+                }
+                else{
+                    return brst + ':' + min + 'pm';
+                }
+         }   
+            
+        
     };
  
     console.log(' &nbsp &nbsp' + logTimePST());
@@ -247,6 +333,7 @@
     console.log(' &nbsp &nbsp'  + logTimeBST());
     console.log(' &nbsp &nbsp' + logTimeGST());
     console.log(' &nbsp &nbsp'  + logTimeIST());
+    console.log(' &nbsp &nbsp'  + logTimeIsST());
     console.log(' &nbsp &nbsp'   + logTimeCST());
     console.log(' &nbsp &nbsp'  + logTimeSST());
     console.log( ' &nbsp &nbsp'  + logTimeAST());
