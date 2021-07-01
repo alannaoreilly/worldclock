@@ -58,11 +58,12 @@
     
     //Times that work: 8pm EST, 1pm ET
     
-    var time = Number(window.prompt("time"));
+    var hour = Number(window.prompt("hour"));
+    var minute = Number(window.prompt("min"));
 
-    let est = time
+    let est = hour
     let ust = est + 4
-    let min = '15' 
+    let min = minute 
 
     //LA
     const logTimePST = () => {
