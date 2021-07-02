@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
    
@@ -56,7 +57,7 @@
     })
     (document.getElementById("est"));
     
-    //Times that work: 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET, 9pm ET
+    //Times that work: 12 am EST, 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET, 9pm ET
     
     var hour = Number(window.prompt("Hour(in EST)"));
     var minute = window.prompt("Minute (in EST)");
@@ -67,6 +68,8 @@
     let est = hour
     let ust = est + 4
     let date = d + 1
+    let date1 = d
+    let date2 = d - 1 
     let month = m
     let min = minute 
 
@@ -83,21 +86,60 @@
             date = date + 'th';
     }
 
+    if (date1 == 1){
+         date1 = date1 + 'st';
+        }
+    else if (date1 == 2){
+          date1 = date1 + 'nd';
+        }
+    else if (date1 == 3){
+            date1 = date1 + 'rd';
+        }
+     else{
+            date1 = date1 + 'th';
+    }
+    
+    if (date2 == 1){
+         date2 = date2 + 'st';
+        }
+    else if (date2 == 2){
+          date2 = date2 + 'nd';
+        }
+    else if (date2 == 3){
+            date2 = date2 + 'rd';
+        }
+     else{
+            date2 = date2 + 'th';
+    }
+
     //LA
     const logTimePST = () => {
         pst = ust - 7 
         if (pst < 12 && pst > 0){
-            return pst + ':' + min + 'am';
+            return pst + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date1;
         }
-        else{
+        else if (pst < 0){
+            pst = 12 + pst
+            return pst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
+        }
+        else if (pst < 24 && pst >0){
             pst = pst - 12
                 if (pst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return pst + ':' + min + 'pm';
+                    return pst + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date1;
                 }
-            }     
+            }  
+        else  {
+        pst = pst + 24
+        if (pst == 0){
+                return 12 + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date2;
+            }
+            else{
+                return pst + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date2;
+            }
+        }      
     };
 
 
@@ -105,33 +147,51 @@
     const logTimeMST = () => {
         mst = ust - 5 
         if (mst < 12 && mst > 0){
-            return mst + ':' + min + 'am';
+            return mst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;;
         }
-        else{
+        else if (mst < 0){
+            mst = 12 + mst
+            return mst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;;
+        }
+        else if (mst < 24 && mst > 0){
             mst = mst - 12
                 if (mst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return mst + ':' + min + 'pm';
+                    return mst + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date1;
                 }
-            }     
+            }  
+        else  {
+        mst = mst + 24
+        if (mst == 0){
+                return 12 + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date2;
+            }
+            else{
+                return mst + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date2;
+            }
+        }      
     };
 
 
     //NYC
     const logTimeEST = () => {
         est = ust - 4
-        if (est < 12 && est > 0){
-            return est + ':' + min + 'am';
+        if (est < 12 && est >= 0){
+            if (est == 0){
+                    return 12 + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
+                }
+            else{
+                return est + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
+            }
         }
         else{
             est = est - 12
                 if (est == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return est + ':' + min + 'pm';
+                    return est + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
             }     
     };
@@ -141,19 +201,19 @@
     const logTimeBrST = () => {
         brst = ust - 3
         if (brst < 12){
-            return brst + ':' + min + 'am';
+            return brst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (brst <= 24) {
             brst = Math.abs(brst - 12)
                 if (brst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return brst + ':' + min + 'pm';
+                    return brst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
             }   
         else{
-            brst = brst -24
+            brst = brst - 24
                 if (brst == 0){
                     return 12 + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date;
                 }
@@ -168,20 +228,25 @@
     const logTimeBST = () => {
         bst = ust +1 
         if (bst < 12){
-            return bst + ':' + min + 'am';
+            return bst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (bst <= 24) {
             bst = Math.abs(bst - 12)
                 if (bst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return bst + ':' + min + 'pm';
+                    return bst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
             }   
         else{
             bst = bst -24
-            return bst + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;
+            if (bst == 0){
+                    return 12 + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date;
+                }
+            else{
+                return bst + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;
+            }
         }
     };
 
@@ -190,15 +255,15 @@
     const logTimeGST = () => {
         Gst = ust + 2
         if (Gst < 12){
-            return Gst + ':' + min + 'am';
+            return Gst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (Gst <=24) {
             Gst = Math.abs(Gst - 12)
                 if (Gst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return Gst + ':' + min + 'pm';
+                    return Gst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
             }   
         else{
@@ -216,15 +281,15 @@
     const logTimeIST = () => {
         ist = ust + 3
         if (ist < 12){
-            return ist + ':' + min + 'am';
+            return ist + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (ist <= 24) {
             ist = Math.abs(ist - 12)
                 if (ist == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return ist + ':' + min + 'pm';
+                    return ist + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
             }   
         else{
@@ -242,15 +307,15 @@
     const logTimeIsST = () => {
         isst = ust + 5
         if (isst < 12){
-            return isst + ':' + min + 'am';
+            return isst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (isst <= 24) {
             isst = Math.abs(isst - 12)
                 if (isst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return isst + ':' + min + 'pm';
+                    return isst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
             }   
         else{
@@ -269,15 +334,15 @@
     const logTimeCST = () => {
         cst = ust + 8
         if (cst < 12){
-            return cst + ':' + min + 'am';
+            return cst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (cst <= 24) {
             cst = Math.abs(cst - 12)
                 if (cst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
                 else{
-                    return cst + ':' + min + 'pm';
+                    return cst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
                 }
             }   
         else{
@@ -295,7 +360,7 @@
     const logTimeSST = () => {
         sst = ust - 2
         if (sst <= 12){
-            return sst + ':' + min + 'pm';
+            return sst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (sst < 24) {
             sst = Math.abs(sst - 12)
@@ -321,7 +386,7 @@
     //Auckland
     const logTimeAST = () => {
         if (ust <= 12){
-            return ust + ':' + min + 'pm';
+            return ust + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
         }
         else if (ust <= 24) {
             ust = Math.abs(ust - 12)
@@ -361,4 +426,3 @@
     console.log( ' &nbsp &nbsp' + logTimeAST());
 
 </script>
-
