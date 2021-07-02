@@ -143,7 +143,7 @@
         if (brst < 12){
             return brst + ':' + min + 'am';
         }
-        else if (brst < 24) {
+        else if (brst <= 24) {
             brst = Math.abs(brst - 12)
                 if (brst == 0){
                     return 12 + ':' + min + 'pm';
@@ -170,7 +170,7 @@
         if (bst < 12){
             return bst + ':' + min + 'am';
         }
-        else if (bst < 24) {
+        else if (bst <= 24) {
             bst = Math.abs(bst - 12)
                 if (bst == 0){
                     return 12 + ':' + min + 'pm';
@@ -192,7 +192,7 @@
         if (Gst < 12){
             return Gst + ':' + min + 'am';
         }
-        else if (Gst < 24) {
+        else if (Gst <=24) {
             Gst = Math.abs(Gst - 12)
                 if (Gst == 0){
                     return 12 + ':' + min + 'pm';
@@ -218,7 +218,7 @@
         if (ist < 12){
             return ist + ':' + min + 'am';
         }
-        else if (ist < 24) {
+        else if (ist <= 24) {
             ist = Math.abs(ist - 12)
                 if (ist == 0){
                     return 12 + ':' + min + 'pm';
@@ -244,7 +244,7 @@
         if (isst < 12){
             return isst + ':' + min + 'am';
         }
-        else if (isst < 24) {
+        else if (isst <= 24) {
             isst = Math.abs(isst - 12)
                 if (isst == 0){
                     return 12 + ':' + min + 'pm';
@@ -271,7 +271,7 @@
         if (cst < 12){
             return cst + ':' + min + 'am';
         }
-        else if (cst < 24) {
+        else if (cst <= 24) {
             cst = Math.abs(cst - 12)
                 if (cst == 0){
                     return 12 + ':' + min + 'pm';
@@ -294,7 +294,7 @@
     //Sydney
     const logTimeSST = () => {
         sst = ust - 2
-        if (sst < 12){
+        if (sst <= 12){
             return sst + ':' + min + 'pm';
         }
         else if (sst < 24) {
@@ -320,7 +320,7 @@
 
     //Auckland
     const logTimeAST = () => {
-        if (ust < 12){
+        if (ust <= 12){
             return ust + ':' + min + 'pm';
         }
         else if (ust < 24) {
