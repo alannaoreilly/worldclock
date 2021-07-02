@@ -57,7 +57,7 @@
     })
     (document.getElementById("est"));
     
-    //Times that work: 12 am EST, 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET, 9pm ET
+    //Times that work: 11 am EST, 12 am EST, 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET, 9pm ET
     
     var hour = Number(window.prompt("Hour(in EST)"));
     var minute = window.prompt("Minute (in EST)");
@@ -73,44 +73,6 @@
     let month = m
     let min = minute 
 
-    if (date == 1){
-         date = date + 'st';
-        }
-    else if (date == 2){
-          date = date + 'nd';
-        }
-    else if (date == 3){
-            date = date + 'rd';
-        }
-     else{
-            date = date + 'th';
-    }
-
-    if (date1 == 1){
-         date1 = date1 + 'st';
-        }
-    else if (date1 == 2){
-          date1 = date1 + 'nd';
-        }
-    else if (date1 == 3){
-            date1 = date1 + 'rd';
-        }
-     else{
-            date1 = date1 + 'th';
-    }
-    
-    if (date2 == 1){
-         date2 = date2 + 'st';
-        }
-    else if (date2 == 2){
-          date2 = date2 + 'nd';
-        }
-    else if (date2 == 3){
-            date2 = date2 + 'rd';
-        }
-     else{
-            date2 = date2 + 'th';
-    }
 
     //LA
     const logTimePST = () => {
