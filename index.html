@@ -56,7 +56,7 @@
     })
     (document.getElementById("est"));
     
-    //Times that work: 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET
+    //Times that work: 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET, 9pm ET
     
     var hour = Number(window.prompt("Hour(in EST)"));
     var minute = window.prompt("Minute (in EST)");
@@ -323,7 +323,7 @@
         if (ust <= 12){
             return ust + ':' + min + 'pm';
         }
-        else if (ust < 24) {
+        else if (ust <= 24) {
             ust = Math.abs(ust - 12)
                 if (ust == 0){
                     return 12 + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;
@@ -332,14 +332,13 @@
                     return ust + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;
                 }
         }
-        
         else{
-            ust = ust -24
+            ust = ust - 24
             if (ust == 0){
-                return 12 + ':' + min + 'pm';
+                return 12 + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;;
             }
             else{
-                return brst + ':' + min + 'pm';
+                return ust + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;;
             }
         }      
     };
