@@ -303,16 +303,16 @@
                     return 12 + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;;
                 }
                 else{
-                    return sst + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;;
+                    return sst + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;
                 }
             }   
         else{
             sst = sst -24
             if (sst == 0){
-                    return 12 + ':' + min + 'pm';
+                    return 12 + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;
                 }
                 else{
-                    return sst + ':' + min + 'pm';
+                    return sst + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;
                 }
          }   
 
@@ -335,10 +335,10 @@
         else{
             ust = ust - 24
             if (ust == 0){
-                return 12 + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;;
+                return 12 + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;
             }
             else{
-                return ust + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;;
+                return ust + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date;
             }
         }      
     };
