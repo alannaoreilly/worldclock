@@ -131,7 +131,7 @@ const logTimeBrST = () => {
     if (brst < 12){
         return brst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
     }
-    else if (brst <= 24) {
+    else if (brst < 24) {
         brst = Math.abs(brst - 12)
             if (brst == 0){
                 return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
@@ -158,7 +158,7 @@ const logTimeBST = () => {
     if (bst < 12){
         return bst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
     }
-    else if (bst <= 24) {
+    else if (bst < 24) {
         bst = Math.abs(bst - 12)
             if (bst == 0){
                 return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
@@ -185,7 +185,7 @@ const logTimeGST = () => {
     if (Gst < 12){
         return Gst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
     }
-    else if (Gst <=24) {
+    else if (Gst < 24) {
         Gst = Math.abs(Gst - 12)
             if (Gst == 0){
                 return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
@@ -211,13 +211,13 @@ const logTimeIST = () => {
     if (ist < 12){
         return ist + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
     }
-    else if (ist <= 24) {
+    else if (ist < 24) {
         ist = Math.abs(ist - 12)
             if (ist == 0){
                 return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
             }
             else{
-                return ist + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
+                return ist + ':' + min + 'pm' + '&nbsp' + month + '&nbsp' + date1;
             }
         }   
     else{
@@ -237,7 +237,7 @@ const logTimeIsST = () => {
     if (isst < 12){
         return isst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
     }
-    else if (isst <= 24) {
+    else if (isst < 24) {
         isst = Math.abs(isst - 12)
             if (isst == 0){
                 return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
@@ -264,7 +264,7 @@ const logTimeCST = () => {
     if (cst < 12){
         return cst + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
     }
-    else if (cst <= 24) {
+    else if (cst < 24) {
         cst = Math.abs(cst - 12)
             if (cst == 0){
                 return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
@@ -316,7 +316,7 @@ const logTimeAST = () => {
     if (ust <= 12){
         return ust + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
     }
-    else if (ust <= 24) {
+    else if (ust < 24) {
         ust = Math.abs(ust - 12)
             if (ust == 0){
                 return 12 + ':' + min + 'am' + '&nbsp' + month + '&nbsp' + date;
