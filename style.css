@@ -43,6 +43,15 @@ h1{
     text-align:center;
 }
 
+h2{
+    color:white;
+    font-size:4vw;
+    font-family: 'Poppins-Medium';
+    margin: 0px;
+    padding-bottom: 0.5vw;
+    text-align:center;
+}
+
 ul{
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */

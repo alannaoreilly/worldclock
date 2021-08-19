@@ -1,3 +1,11 @@
+
+    var doc = window.prompt("Event");
+    if (doc != null) {
+        document.getElementById("g").innerHTML = doc
+    }
+
+
+
 (function (est) {
     console.old = console.log;
     console.log = function () {
@@ -24,7 +32,6 @@
 
 //Times that work: 11 am EST, 12 am EST, 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET, 9pm ET
 
-var title = window.prompt("Event");
 var hour = Number(window.prompt("Hour(in EST)"));
 var minute = window.prompt("Minute (in EST)");
 var m = window.prompt("Month(in EST)");
