@@ -24,6 +24,7 @@
 
 //Times that work: 11 am EST, 12 am EST, 8pm EST, 1pm ET, 2pm ET, 3 pm ET, 4pm ET, 9pm ET
 
+var title = window.prompt("Event");
 var hour = Number(window.prompt("Hour(in EST)"));
 var minute = window.prompt("Minute (in EST)");
 var m = window.prompt("Month(in EST)");
@@ -216,7 +217,7 @@ const logTimeIST = () => {
                 return 12 + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
             }
             else{
-                return ist + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
+                return ist + ':' + min + 'am'+ '&nbsp' + month + '&nbsp' + date1;
             }
         }   
     else{
