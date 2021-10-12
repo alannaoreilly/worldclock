@@ -293,7 +293,7 @@ const logTimeCST = () => {
 
 //Sydney
 const logTimeSST = () => {
-    sst = ust - 2
+    sst = ust - 2 + 1
     if (sst <= 12){
         return sst + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
     }
@@ -320,6 +320,7 @@ const logTimeSST = () => {
 
 //Auckland
 const logTimeAST = () => {
+    ust = ust + 1
     if (ust <= 12){
         return ust + ':' + min + 'pm'+ '&nbsp' + month + '&nbsp' + date1;
     }
